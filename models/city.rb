@@ -12,7 +12,8 @@ class City
     @country_id = options["country_id"].to_i
   end
 
-#CREATE
+##CREATE
+
   def save
     sql = "INSERT INTO cities
           (name, has_visited, country_id)
@@ -24,17 +25,36 @@ class City
     @id = result.first["id"].to_i
   end
 
-#READ
+##READ
 
   def self.all
     sql = "SELECT * FROM cities"
-    results = SqlRunner.run(sql)
-    return results.map {|city| City.new(city)}
+    result = SqlRunner.run(sql)
+    return result.map {|city| City.new(city)}
   end
-  
-#UPDATE
 
-#DELETE
+  def self.find_by_id(id)
+    sql = "SELECT * FROM cities
+           WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    return City.new(result.first)
+  end
+
+##UPDATE
+
+def update
+  sql = "UPDATE cities
+         SET
+        (name, has_visited, country_id)
+         =
+        ($1, $2, $3)
+         WHERE id = $4"
+  values = [@name, @has_visited, @country_id, @id]
+  SqlRunner.run(sql, values)
+end
+
+##DELETE
 
   def self.delete_by_id(id)
     sql = "DELETE FROM cities
