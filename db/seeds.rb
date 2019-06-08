@@ -19,3 +19,7 @@ city1 = City.new ({
   })
 
 city1.save
+
+
+binding.pry
+nil

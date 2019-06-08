@@ -22,7 +22,14 @@ class Country
     result = SqlRunner.run(sql, values)
     @id = result.first()["id"].to_i
   end
+
 #READ
+
+  def self.all
+    sql = "SELECT * FROM countries"
+    results = SqlRunner.run(sql)
+    return results.map {|country| Country.new(country)}
+  end
 
 #UPDATE
 

@@ -23,8 +23,15 @@ class City
     result = SqlRunner.run(sql, values)
     @id = result.first["id"].to_i
   end
+
 #READ
 
+  def self.all
+    sql = "SELECT * FROM cities"
+    results = SqlRunner.run(sql)
+    return results.map {|city| City.new(city)}
+  end
+  
 #UPDATE
 
 #DELETE
