@@ -12,8 +12,8 @@ get "/about" do
   erb(:about)
 end
 
-get "/your_bucket_list" do
+get "/index" do
   @countries = Country.all
   @cities = City.all
-  erb(:your_bucket_list)
+  erb(:index)
 end
