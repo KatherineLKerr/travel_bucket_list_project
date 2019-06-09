@@ -5,7 +5,7 @@ require_relative("controllers/countries_controller")
 
 
 get "/" do
-  erb(:index)
+  erb(:home)
 end
 
 get "/about" do
