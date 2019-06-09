@@ -6,12 +6,15 @@
 <ul>
 <% for country in @countries %>
   <li class="country-li">
-    <%= country.name %>
+    <%= country.name %> <a href="countries/edit">Edit</a>
       <ol>
         <br>
         <% for city in @cities %>
           <% if city.country_id == country.id %>
-            <li class="city-li"><%= city.name %></li>
+            <li class="city-li">
+              <%= city.name %>
+              <a href="cities/edit">Edit</a>
+            </li>
             <br>
           <% end %>
         <% end %>
