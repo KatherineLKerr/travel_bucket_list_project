@@ -4,17 +4,18 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="/css/buttons_and_links.css">
 
     <title>Travel Bucket List</title>
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a href="/">Index</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/your_bucket_list">Your Bucket List</a></li>
-      </ul>
+        <a href="/">Index</a>
+        <a href="/about">About</a>
+        <a href="/your_bucket_list">Your Bucket List</a>
     </nav>
+    <div class="maintext">
       <%= yield %>
+    </div>
   </body>
 </html>

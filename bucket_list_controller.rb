@@ -1,7 +1,7 @@
 require("sinatra")
 require("sinatra/contrib/all")
-require_relative('controllers/cities_controller')
-require_relative('controllers/countries_controller')
+require_relative("controllers/cities_controller")
+require_relative("controllers/countries_controller")
 
 
 get "/" do
@@ -14,5 +14,6 @@ end
 
 get "/your_bucket_list" do
   @countries = Country.all
+  @cities = City.all
   erb(:your_bucket_list)
 end

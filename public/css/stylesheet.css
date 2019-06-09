@@ -9,12 +9,21 @@ body {
 
 h1 {
   color: #4592af;
+  text-align: center;
 }
 
 nav {
   background-color: #e3c4a8;
+  text-align: center;
+  padding: 10px;
 }
 
-ul {
-  margin: 0px;
+a {
+  padding: 10px;
+}
+
+.maintext {
+  margin-right: 20%;
+  margin-left: 20%;
+  background: rgba(76, 175, 80, 0.8); /*rgb, a=alpha(opacity 0.0 - 1.0)*/
 }

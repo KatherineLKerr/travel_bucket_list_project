@@ -1,7 +1,21 @@
 <h1>Your Bucket List</h1>
 
+<a class="button" href="/countries/add">Add Country</a>
+<a class="button" href="/cities/add">Add City</a>
+
 <ul>
 <% for country in @countries %>
-  <li><a href="/<% country.name %>"><%= country.name %></a></li>
+  <li class="country-li">
+    <%= country.name %>
+      <ol>
+        <br>
+        <% for city in @cities %>
+          <% if city.country_id == country.id %>
+            <li class="city-li"><%= city.name %></li>
+            <br>
+          <% end %>
+        <% end %>
+      </ol>
+  </li>
 <% end %>
 </ul>
