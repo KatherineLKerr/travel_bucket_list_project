@@ -8,6 +8,9 @@
     <a href="countries/<%=country.id%>"><%= country.name %></a>
     <%= country.has_visited %>
     <a href="countries/<%=country.id%>/edit">Edit</a>
+    <form action="/countries/<%=country.id%>/delete" method="post">
+      <input type="submit" value="Delete Country">
+    </form>
   </li>
 <% end %>
 </ul>

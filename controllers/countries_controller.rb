@@ -33,7 +33,13 @@ end
 
 post "/countries/:id" do #update
   Country.new(params).update
-  redirect to "/countries"
+  erb(:confirmation)
+end
+
+post "/countries/:id/delete" do #destroy
+ country = Country.find_by_id(params[:id])
+ country.delete_by_id(params[:id])
+ redirect to "/countries"
 end
 
 
