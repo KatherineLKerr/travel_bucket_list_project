@@ -8,6 +8,9 @@
    <a href="cities/<%=city.id%>"><%=city.name%></a>
    <%=city.has_visited%>
    <a href="cities/<%=city.id%>/edit">Edit</a>
+   <form action="cities/<%=city.id%>/delete" method="post">
+     <input type="submit" value="Delete City">
+   </form>
  </li>
  <% end %>
 </ul>

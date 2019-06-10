@@ -41,15 +41,3 @@ post "/countries/:id/delete" do #destroy
  country.delete_by_id
  redirect to "/countries"
 end
-
-
-##FOR COUNTRIES cities will be the same(just replace countries with cities lol) i think.
-#               because the cities dont need to be inside /countries they are just linked to from in there.
-#
-# index  = get  "/countries"
-# show   = get  "/countries/:id"
-# new    = get  "/countries/new"
-# create = post "/countries"
-# edit   = get  "/countries/:id/edit"
-# update = post "/countries/:id"
-# destroy= post "/countries/id/delete"
