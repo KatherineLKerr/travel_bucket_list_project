@@ -1,0 +1,13 @@
+<h1>Your Bucket List</h1>
+
+<a class="button" href="/countries/new">Add Country</a>
+
+<ul>
+<% for country in @countries %>
+  <li class="country-li">
+    <%= country.name %>
+    <%= country.has_visited %>
+    <a href="countries/edit">Edit</a>
+  </li>
+<% end %>
+</ul>

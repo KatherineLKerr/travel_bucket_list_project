@@ -1,8 +1,8 @@
 body {
-  background: #85b4e4 url('/images/world_map.jpg');
-  background-size: 100%;
+  background: #85b4e4 /*url('/images/world_map.jpg')*/;
+  /* background-size: 100%;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: top; */
   font-family: 'Montserrat', sans-serif;
   margin: 0px;
 }
@@ -25,5 +25,5 @@ a {
 .maintext {
   margin-right: 20%;
   margin-left: 20%;
-  background: rgba(76, 175, 80, 0.8); /*rgb, a=alpha(opacity 0.0 - 1.0)*/
+  background: rgba(175, 192, 219, 0.8); /*rgb, a=alpha(opacity 0.0 - 1.0)*/
 }

@@ -1,1 +1,23 @@
-<h1>new country</h1>
+<h1>New Country</h1>
+
+<form action="/countries" method="post">
+
+
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name">
+
+    <br>
+
+    <label for="has_visited">Have you visited?</label>
+    <input type="radio" name="has_visited" value="true" id="has_visited">Yes
+    <input type="radio" name="has_visited" value="false" id="has_visited">No
+
+    <br>
+
+    <input type="submit" value="Add Country">
+
+
+<!-- name matches keys in options hash in initialize -->
+<!-- for on label should match id on input/select -->
+
+</form>
