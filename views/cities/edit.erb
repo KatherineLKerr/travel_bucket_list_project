@@ -1,1 +1,30 @@
-<h1>edit city</h1>
+<h1>Edit <%= @city.name %> </h1>
+
+<form action="/cities/<%=@city.id%>" method="post">
+
+
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" value="<%=@city.name%>">
+
+    <br>
+
+    <label for="has_visited">Have you visited?</label>
+    <input type="radio" name="has_visited" value="true" id="has_visited">Yes
+    <input type="radio" name="has_visited" value="false" id="has_visited">No
+
+    <br>
+
+    <label for="country_id">What country is it in?</label>
+    <select id="country_id" name="country_id">
+      <% for country in @countries %>
+        <option value="<%=country.id%>"><%=country.name%></option>
+      <% end %>
+    </select>
+
+    <input type="submit" value="Update City">
+
+
+<!-- name matches keys in options hash in initialize -->
+<!-- for on label should match id on input/select -->
+
+</form>

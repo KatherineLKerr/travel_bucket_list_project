@@ -1,10 +1,13 @@
 <h1>All Destinations</h1>
 
+<a href="cities/new">Add City</a>
+
 <ul>
  <% for city in @cities %>
  <li>
    <a href="cities/<%=city.id%>"><%=city.name%></a>
    <%=city.has_visited%>
+   <a href="cities/<%=city.id%>/edit">Edit</a>
  </li>
  <% end %>
 </ul>

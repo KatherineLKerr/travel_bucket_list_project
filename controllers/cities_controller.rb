@@ -9,33 +9,36 @@ get "/cities" do #index - cities
   erb(:"cities/cities")
 end
 
-# get '/countries/new' do #new
-#   @countries = Country.all
-#   erb(:"countries/new")
-# end
-#
-# get "/countries/:id" do #show
-#   @cities = City.all
-#   @country = Country.find_by_id(params[:id])
-#   erb(:"countries/show")
-# end
-#
-# post "/countries" do #create
-#   new_country = Country.new(params)
-#   new_country.save
-#   erb(:confirmation)
-# end
-#
-# get "/countries/:id/edit" do #edit
-#   @country = Country.find_by_id(params[:id])
-#   erb(:"countries/edit")
-# end
-#
-# post "/countries/:id" do #update
-#   Country.new(params).update
-#   erb(:confirmation)
-# end
-#
+get '/cities/new' do #new
+  @countries = Country.all
+  @cities = City.all
+  erb(:"cities/new")
+end
+
+get "/cities/:id" do #show
+  @city = City.find_by_id(params[:id])
+  erb(:"cities/show")
+end
+
+post "/cities" do #create
+  new_city = City.new(params)
+  new_city.save
+  erb(:confirmation)
+end
+
+get "/cities/:id/edit" do #edit
+  @countries = Country.all
+  @city = City.find_by_id(params[:id])
+  erb(:"cities/edit")
+end
+
+post "/cities/:id" do #update
+  p params
+  City.new(params).update
+
+  erb(:confirmation)
+end
+
 # post "/countries/:id/delete" do #destroy
 #  country = Country.find_by_id(params[:id])
 #  country.delete_by_id
