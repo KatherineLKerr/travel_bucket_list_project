@@ -7,7 +7,7 @@
   <li class="country-li">
     <a href="countries/<%=country.id%>"><%= country.name %></a>
     <%= country.has_visited %>
-    <a href="countries/edit">Edit</a>
+    <a href="countries/<%=country.id%>/edit">Edit</a>
   </li>
 <% end %>
 </ul>
