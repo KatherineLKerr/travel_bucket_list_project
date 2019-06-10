@@ -6,7 +6,7 @@ also_reload("../models/*")
 
 get "/countries" do #index - countries
   @countries = Country.all
-  erb(:countries)
+  erb(:"countries/countries")
 end
 
 get '/countries/new' do #new

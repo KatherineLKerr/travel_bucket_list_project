@@ -1,0 +1,13 @@
+.button {
+  text-decoration: none;
+}
+
+.enterbtn {
+  text-decoration: none;
+  display: inline-block;
+  background-color: #ffffff;
+}
+
+.enterbtn:hover {
+  background-color: #cccccc;
+}

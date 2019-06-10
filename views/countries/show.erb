@@ -1,5 +1,4 @@
 <h1> <%=@country.name%> </h1>
-
 <p> <%=@country.has_visited%> </p>
 
 <ol><br>
@@ -8,7 +7,7 @@
       <li class="city-li">
         <%= city.name %>
         <%= city.has_visited %>
-        <a href="">Edit</a>
+        <a href="../cities/<%=city.id%>/edit">Edit</a>
       </li><br>
     <% end %>
   <% end %>
