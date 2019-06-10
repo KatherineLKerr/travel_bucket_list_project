@@ -1,3 +1,15 @@
 <h1> <%=@country.name%> </h1>
 
 <p> <%=@country.has_visited%> </p>
+
+<ol><br>
+  <% for city in @cities %>
+    <% if city.country_id == @country.id %>
+      <li class="city-li">
+        <%= city.name %>
+        <%= city.has_visited %>
+        <a href="cities/edit">Edit</a>
+      </li><br>
+    <% end %>
+  <% end %>
+</ol>

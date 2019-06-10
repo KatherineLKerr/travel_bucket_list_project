@@ -18,6 +18,7 @@ get "/countries" do #index - countries
 end
 
 get "/countries/:id" do #show
+  @cities = City.all
   @country = Country.find_by_id(params[:id])
   erb(:"countries/show")
 end
