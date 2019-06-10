@@ -5,7 +5,7 @@
 <ul>
 <% for country in @countries %>
   <li class="country-li">
-    <%= country.name %>
+    <a href="countries/<%=country.id%>"><%= country.name %></a>
     <%= country.has_visited %>
     <a href="countries/edit">Edit</a>
   </li>
