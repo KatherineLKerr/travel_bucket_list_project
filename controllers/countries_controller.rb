@@ -43,7 +43,8 @@ post "/countries/:id/delete" do #destroy
 end
 
 
-##FOR COUNTRIES
+##FOR COUNTRIES cities will be the same(just replace countries with cities lol) i think.
+#               because the cities dont need to be inside /countries they are just linked to from in there.
 #
 # index  = get  "/countries"
 # show   = get  "/countries/:id"
