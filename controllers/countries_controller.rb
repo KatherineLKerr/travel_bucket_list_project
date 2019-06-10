@@ -38,7 +38,7 @@ end
 
 post "/countries/:id/delete" do #destroy
  country = Country.find_by_id(params[:id])
- country.delete_by_id(params[:id])
+ country.delete_by_id
  redirect to "/countries"
 end
 

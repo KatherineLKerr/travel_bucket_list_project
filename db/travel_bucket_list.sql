@@ -13,7 +13,7 @@ CREATE TABLE cities
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   has_visited BOOLEAN,
-  country_id INT4 REFERENCES countries(id)
+  country_id INT4 REFERENCES countries(id) ON DELETE CASCADE
 );
 
 SELECT * FROM countries;

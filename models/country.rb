@@ -55,10 +55,10 @@ end
 
 ##DELETE
 
-  def self.delete_by_id(id)
+  def delete_by_id
     sql = "DELETE FROM countries
            WHERE id = $1"
-    values = [id]
+    values = [@id]
     SqlRunner.run(sql, values)
   end
 
