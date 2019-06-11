@@ -1,4 +1,4 @@
-<h1>Destinations you've visited</h1>
+<h1>Destinations you haven't visited yet</h1>
 
 
 <table>
@@ -10,7 +10,7 @@
   </tr>
 
 <% for country in @countries %>
-  <% if country.has_visited == "t" %>
+  <% if country.has_visited == "f" %>
     <tr class="mediumrow">
       <td><a href="/countries/<%=country.id%>"><%= country.name %></a></td>
       <td></td>
@@ -31,7 +31,7 @@
   </tr>
 
   <% for city in @cities %>
-    <% if city.has_visited == "t" %>
+    <% if city.has_visited == "f" %>
     <tr class="lightrow">
       <td><a href="cities/<%=city.id%>"><%= city.name %></a></td>
       <td></td>

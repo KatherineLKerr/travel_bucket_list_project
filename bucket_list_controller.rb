@@ -23,3 +23,9 @@ get "/visited" do
   @countries = Country.all
   erb(:visited)
 end
+
+get "/not_visited" do
+  @cities = City.all
+  @countries = Country.all
+  erb(:not_visited)
+end
