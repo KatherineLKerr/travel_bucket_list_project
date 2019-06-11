@@ -17,3 +17,9 @@ get "/your_bucket_list" do
   @countries = Country.all
   erb(:your_bucket_list)
 end
+
+get "/visited" do
+  @cities = City.all
+  @countries = Country.all
+  erb(:visited)
+end

@@ -1,8 +1,5 @@
 body {
-  background: #85b4e4 /*url('/images/world_map.jpg')*/;
-  /* background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top; */
+  background: #85b4e4;
   font-family: 'Montserrat', sans-serif;
   margin: 0px;
 }

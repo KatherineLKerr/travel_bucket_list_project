@@ -1,43 +1,29 @@
-<h1>Your Bucket List</h1>
+<h1>Destinations you've visited</h1>
 
-<a href="/countries/new">Add New Country</a>
-<a href="cities/new">Add New City</a>
-
-<br><br>
 
 <table>
   <tr class="darkrow">
     <th>Country name:</th>
     <th>Cities in country:</th>
-    <th>Visited?</th>
     <th></th>
     <th></th>
   </tr>
 
 <% for country in @countries %>
+<% if country.has_visited == "t" %>
   <tr class="mediumrow">
     <td><a href="/countries/<%=country.id%>"><%= country.name %></a></td>
     <td></td>
-    <td><% if country.has_visited == "t" %>
-          <%= "yes" %>
-        <% else %>
-          <%= "no" %>
-        <% end %></td>
     <td><a href="countries/<%=country.id%>/edit">Edit</a></td>
     <td><form action="/countries/<%=country.id%>/delete" method="post">
       <input type="submit" value="Delete Country"></td>
   </tr>
 
   <% for city in @cities %>
-    <% if city.country_id == country.id %>
+    <% if city.country_id == country.id && city.has_visited == "t" %>
     <tr class="lightrow">
       <td></td>
       <td>-<a href="cities/<%=city.id%>"><%= city.name %></a></td>
-      <td><% if city.has_visited == "t" %>
-            <%= "yes" %>
-          <% else %>
-            <%= "no" %>
-          <% end %></td>
       <td><a href="cities/<%=city.id%>/edit">Edit</a></td>
       <td><form action="cities/<%=city.id%>/delete" method="post">
             <input type="submit" value="Delete City">
@@ -45,5 +31,6 @@
     </tr>
     <% end %>
   <% end %>
+<% end %>
 <% end %>
 </table>
