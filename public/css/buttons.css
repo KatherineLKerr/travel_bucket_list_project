@@ -8,6 +8,10 @@
   background-color: #ffffff;
 }
 
+.enter{
+  text-align: center;
+}
+
 .enterbtn:hover {
   background-color: #cccccc;
 }

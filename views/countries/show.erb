@@ -1,7 +1,12 @@
 <h1> <%=@country.name%> </h1>
-<p> <%=@country.has_visited%> </p>
+<p><% if @country.has_visited == "t" %>
+      <%= "Already visited!" %>
+    <% else %>
+      <%= "Not visited yet!" %>
+    <% end %></p>
 
-<ol><br>
+<h3>Cities in <%= @country.name %>:</h3>
+<ol>
   <% for city in @cities %>
     <% if city.country_id == @country.id %>
       <li class="city-li">
@@ -12,3 +17,5 @@
     <% end %>
   <% end %>
 </ol>
+
+<a href="/countries">Back to all countries</a>

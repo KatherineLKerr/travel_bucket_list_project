@@ -1,3 +1,9 @@
 <h1><%=@city.name%></h1>
 
-<%= @city.has_visited %>
+<p><% if @city.has_visited == "t" %>
+      <%= "Already visited!" %>
+    <% else %>
+      <%= "Not visited yet!" %>
+    <% end %></p>
+
+<a href="/cities">Back to cities list</a>
