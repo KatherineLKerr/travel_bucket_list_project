@@ -5,7 +5,7 @@
 <br><br>
 
 <table>
-  <tr>
+  <tr class="darkrow">
     <th>Country:</th>
     <th>Visited?</th>
     <th></th>
@@ -13,7 +13,7 @@
   </tr>
 
   <% for country in @countries %>
-  <tr>
+  <tr class="mediumrow">
     <td><a href="countries/<%=country.id%>"><%= country.name %></a></td>
     <td><% if country.has_visited == "t" %>
           <%= "yes" %>
@@ -28,7 +28,7 @@
     </td>
   </tr>
   <% end %>
-  
+
 </table>
 
 <br><br>

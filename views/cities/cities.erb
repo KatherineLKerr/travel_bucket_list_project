@@ -5,7 +5,7 @@
 <br><br>
 
 <table>
-  <tr>
+  <tr class="darkrow">
     <th>City:</th>
     <th>Visited?</th>
     <th></th>
@@ -13,7 +13,7 @@
   </tr>
 
   <% for city in @cities %>
-  <tr>
+  <tr class="lightrow">
     <td><a href="cities/<%=city.id%>"><%=city.name%></a></td>
     <td><% if city.has_visited == "t" %>
           <%= "yes" %>

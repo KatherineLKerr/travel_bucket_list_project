@@ -1,0 +1,25 @@
+table {
+  width: 70%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  padding: 10px;
+}
+
+td {
+  padding: 5px;
+}
+
+.darkrow {
+  background-color: #989cad;
+}
+
+.mediumrow {
+  background-color: #b4b7c4;
+}
+
+.lightrow {
+  background-color: #d0d4e5;
+}

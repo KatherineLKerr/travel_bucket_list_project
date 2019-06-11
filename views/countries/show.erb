@@ -5,17 +5,14 @@
       <%= "Not visited yet!" %>
     <% end %></p>
 
+
 <h3>Cities in <%= @country.name %>:</h3>
-<ol>
+<ul>
   <% for city in @cities %>
     <% if city.country_id == @country.id %>
-      <li class="city-li">
-        <%= city.name %>
-        <%= city.has_visited %>
-        <a href="../cities/<%=city.id%>/edit">Edit</a>
-      </li><br>
+      <li><%= city.name %></li>
     <% end %>
   <% end %>
-</ol>
+</ul>
 
-<a href="/countries">Back to all countries</a>
+<a href="/your_bucket_list">Back to your Bucket List</a>

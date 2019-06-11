@@ -6,7 +6,8 @@
 <br><br>
 
 <table>
-  <tr>
+  <tr class="darkrow">
+    <th></th>
     <th>Name:</th>
     <th>Visited?</th>
     <th></th>
@@ -14,8 +15,9 @@
   </tr>
 
 <% for country in @countries %>
-  <tr>
-    <td><%= country.name %></td>
+  <tr class="mediumrow">
+    <td>Country:</td>
+    <td><a href="/countries/<%=country.id%>"><%= country.name %></a></td>
     <td><% if country.has_visited == "t" %>
           <%= "yes" %>
         <% else %>
@@ -28,8 +30,9 @@
 
   <% for city in @cities %>
     <% if city.country_id == country.id %>
-    <tr>
-      <td> - <%= city.name %></td>
+    <tr class="lightrow">
+      <td>City:</td>
+      <td>-<a href="cities/<%=city.id%>"><%= city.name %></a></td>
       <td><% if city.has_visited == "t" %>
             <%= "yes" %>
           <% else %>
