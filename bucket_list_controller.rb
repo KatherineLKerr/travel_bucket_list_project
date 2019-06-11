@@ -13,5 +13,7 @@ get "/about" do
 end
 
 get "/your_bucket_list" do
+  @cities = City.all
+  @countries = Country.all
   erb(:your_bucket_list)
 end
