@@ -11,3 +11,7 @@ end
 get "/about" do
   erb(:about)
 end
+
+get "/your_bucket_list" do
+  erb(:your_bucket_list)
+end
