@@ -1,16 +1,30 @@
 <h1>All Countries</h1>
 
-<a class="button" href="/countries/new">Add Country</a>
+<a class="button" href="/countries/new">Add New Country</a>
 
-<ul>
-<% for country in @countries %>
-  <li>
-    <a href="countries/<%=country.id%>"><%= country.name %></a>
-    <%= country.has_visited %>
-    <a href="countries/<%=country.id%>/edit">Edit</a>
-    <form action="/countries/<%=country.id%>/delete" method="post">
+<br><br>
+
+<table>
+  <tr>
+    <th class="col1">Country:</th>
+    <th class="col2">Visited?</th>
+    <th class="col3"></th>
+    <th class="col4"></th>
+  </tr>
+  <% for country in @countries %>
+  <tr>
+    <td><a href="countries/<%=country.id%>"><%= country.name %></a></td>
+    <td><% if country.has_visited == "t" %>
+          <%= "yes" %>
+        <% else %>
+          <%= "no" %>
+        <% end %>
+      </td>
+    <td><a href="countries/<%=country.id%>/edit">Edit</a></td>
+    <td><form action="/countries/<%=country.id%>/delete" method="post">
       <input type="submit" value="Delete Country">
     </form>
-  </li>
-<% end %>
-</ul>
+    </td>
+  </tr>
+  <% end %>
+</table>
