@@ -1,17 +1,12 @@
-.button {
-  text-decoration: none;
-}
-
-.enterbtn {
-  text-decoration: none;
+.btn {
   display: inline-block;
-  background-color: #ffffff;
+  background-color: #dbdbdb;
 }
 
 .enter{
   text-align: center;
 }
 
-.enterbtn:hover {
+.btn:hover {
   background-color: #cccccc;
 }
