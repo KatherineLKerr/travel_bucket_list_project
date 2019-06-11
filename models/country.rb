@@ -11,7 +11,7 @@ class Country
     @has_visited = options["has_visited"]
   end
 
-##CREATE
+  ##CREATE
 
   def save
     sql = "INSERT INTO countries

@@ -11,6 +11,7 @@
     <th></th>
     <th></th>
   </tr>
+
   <% for city in @cities %>
   <tr>
     <td><a href="cities/<%=city.id%>"><%=city.name%></a></td>
@@ -25,5 +26,9 @@
           <input type="submit" value="Delete City">
         </form></td>
   </tr>
-   <% end %>
+  <% end %>
 </table>
+
+<br><br>
+
+<a href="/your_bucket_list">Back to your Bucket List</a>

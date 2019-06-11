@@ -6,11 +6,12 @@
 
 <table>
   <tr>
-    <th class="col1">Country:</th>
-    <th class="col2">Visited?</th>
-    <th class="col3"></th>
-    <th class="col4"></th>
+    <th>Country:</th>
+    <th>Visited?</th>
+    <th></th>
+    <th></th>
   </tr>
+
   <% for country in @countries %>
   <tr>
     <td><a href="countries/<%=country.id%>"><%= country.name %></a></td>
@@ -27,6 +28,7 @@
     </td>
   </tr>
   <% end %>
+  
 </table>
 
 <br><br>
