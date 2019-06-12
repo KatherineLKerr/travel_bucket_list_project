@@ -1,4 +1,4 @@
-<h1>All Destinations</h1>
+<h1>All Cities</h1>
 
 <a href="cities/new">Add New City</a>
 
@@ -16,9 +16,9 @@
   <tr class="lightrow">
     <td><a href="cities/<%=city.id%>"><%=city.name%></a></td>
     <td><% if city.has_visited == "t" %>
-          <%= "yes" %>
+          <%= "Yes" %>
         <% else %>
-          <%= "no" %>
+          <%= "No" %>
         <% end %>
       </td>
     <td><a href="cities/<%=city.id%>/edit">Edit</a></td>
