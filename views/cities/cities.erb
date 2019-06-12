@@ -15,11 +15,7 @@
   <% for city in @cities %>
   <tr class="lightrow">
     <td><a href="cities/<%=city.id%>"><%=city.name%></a></td>
-    <td><% if city.has_visited == "t" %>
-          <%= "Yes" %>
-        <% else %>
-          <%= "No" %>
-        <% end %>
+    <td><%=city.convert_boolean%>
       </td>
     <td><a href="cities/<%=city.id%>/edit">Edit</a></td>
     <td><form action="cities/<%=city.id%>/delete" method="post">

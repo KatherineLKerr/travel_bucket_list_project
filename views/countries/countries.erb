@@ -15,11 +15,7 @@
   <% for country in @countries %>
   <tr class="mediumrow">
     <td><a href="countries/<%=country.id%>"><%= country.name %></a></td>
-    <td><% if country.has_visited == "t" %>
-          <%= "Yes" %>
-        <% else %>
-          <%= "No" %>
-        <% end %>
+    <td><%=country.convert_boolean%>
       </td>
     <td><a href="countries/<%=country.id%>/edit">Edit</a></td>
     <td><form action="/countries/<%=country.id%>/delete" method="post">

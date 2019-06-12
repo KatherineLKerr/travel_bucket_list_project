@@ -12,6 +12,14 @@ class City
     @country_id = options["country_id"].to_i
   end
 
+  def convert_boolean()
+    if @has_visited == "t"
+      return "Yes"
+    else
+      return "No"
+    end
+  end
+
 ##CREATE
 
   def save

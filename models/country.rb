@@ -13,6 +13,14 @@ class Country
 
   ##CREATE
 
+  def convert_boolean()
+    if @has_visited == "t"
+      return "Yes"
+    else
+      return "No"
+    end
+  end
+
   def save
     sql = "INSERT INTO countries
           (name, has_visited)
